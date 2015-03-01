@@ -1,0 +1,27 @@
+<ion-view title="Home">
+	<ion-content class="has-header">
+		<!-- Display current location's weather data-->
+		<h3>{{city}}</h3>
+		<h5><weather-icon icon="current.icon" id="current-icon"></weather-icon> {{current.currently.summary}}</h5>
+		<p>The temperature now is</p>  
+	<span class="large">{{current.currently.temperature}} ° </span>
+  
+	<p></p><p></p>
+	<input id="locationImage" type="image" src="img/location.jpg" name="location" onclick="getLocation()" height="22" width="22"/>
+	<label class="input-group-addon">Longitude:{{longitude}}</label>
+	<label class="input-group-addon">Latitude: {{latitude}}</label>
+	<p></p><p></p>
+	<p></p><button  class="event received" onClick="regDevice();">Register Device</button>
+	
+	<table style="width:100%">
+		<tr>
+			<td>{{o2}}</td>
+			<td>{{n3}}</td> 
+		</tr>
+		<tr>
+			<td>Eve</td>
+			<td>Jackson</td> 
+		</tr>
+	</table>
+	</ion-content>
+</ion-view>
